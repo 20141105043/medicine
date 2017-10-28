@@ -1,0 +1,325 @@
+@charset"utf-8";
+/* less库 */
+@import "../less/public";
+
+/* 疾病资源 */
+//内容区左侧
+.resource-left {
+  .fl();
+  width: 210px;
+  height: 748px;
+  background-color: #eeeeee;
+  .left-list-header {
+    height: 68px;
+  }
+   .assort {
+    .clearfix();
+    padding-top: 16px;
+    padding-left: 9px;
+    .ass-tag {
+      .fl();
+      .fs-fm(18px);
+      .font-w700();
+      margin-bottom: 2px;
+    }
+    .ass-line {
+      .fl();
+    }
+    .tall {
+      width: 75px;
+      height: 2px;
+      background-color: @usual_color;
+    }
+    .short {
+      width: 191px;
+      height: 1px;
+      background-color: @usual_color;
+    }
+  }
+  .list-cell {
+    .plr(9px,14px);
+    margin-bottom: 1px;
+    .l-h(35px);
+    .ubb(solid);
+    cursor: pointer;
+    .list-cell-tit {
+      .clearfix();
+    }
+    &-con {
+      .fl();
+      color: #000;
+    }
+    &-tag {
+      .fr();
+      margin-top: 15px;
+      .wh(7px);
+      background: url("../images/icon.png") -107px -38px;
+    }
+    &-tag.thistab {
+      background-position: -90px -98px;
+    }
+  }
+  .list-cell.sortTab {
+    padding-left: 6px;
+    .bl(solid,3px,#c0d83f);
+    background-color: @link_color;
+    border-top: none;
+  }
+  .sortBox {
+    .bt(solid);
+    background-color: @link_color;
+    li {
+      padding: 0 10px;
+      line-height: 36px;
+    }
+    a {
+      .d-b();
+      padding-left:25px;
+      color: #333333;
+      i {
+        position: relative;
+        .d-ib();
+        z-index: -1;
+        margin-right: 4px;
+        .wh(8px);
+        background: url("../images/icon.png") -107px -10px;
+      }
+    }
+    span {
+      .d-b();
+      .bt(dotted);
+    }
+  }
+}
+
+.resource-right {
+  .fl();
+  width: 589px;
+  height: 748px;
+  background-color: @link_color;
+  .bl(solid);
+  .coding-head {
+    .clearfix();
+    padding-top: 11px;
+    margin: 0 10px;
+    .bb(solid);
+  }
+  .coding {
+    .fr();
+    margin-bottom: 4px;
+    padding: 7px;
+    background-color: #e0f1ed;
+    a {
+      color: @usual_color;
+    }
+    i {
+      display: inline-block;
+      .wh(8px);
+      background: url("../images/icon.png") -107px -65px;
+    }
+  } 
+}
+.coding-con {
+  position: relative;
+  height: 702px;
+  overflow: hidden;
+}
+.coding-list {
+  .clearfix();
+  width: 576px;
+  padding-left: 10px;
+  li {
+      .fl();
+      width: 23%;
+      line-height: 32px;
+    a {
+      padding: 5px;
+      color: #333333;
+    }
+  }
+}
+//弹窗
+.codeAbout {
+  width: 536px;
+  height: 450px;
+  padding: 19px 20px 25px;
+  .codeAbout-tit {
+    .clearfix();
+    width: 100%;
+    border-bottom: 1px dashed #ccc;
+    height: 25px;
+    padding-bottom: 14px;
+  }
+  .codeAbout-con {
+    padding-top: 20px;
+  }
+}
+.codeAbout-name {
+  .fl();
+  width: 234px;
+  .l-h(25px);
+  margin-right: 24px;
+}
+.codeAbout-txt {
+  width: 148px;
+  height: 23px;
+  text-indent: 11px;
+  border: 1px solid #ccc;
+}
+.big-category {
+  .fr();
+  position: relative;
+  width: 255px;
+  .l-h(25px);
+  .find-btn {
+    .d-ib();
+    width: 60px;
+    height: 25px;
+    text-indent: 17px;
+    color: #fff;
+    background: #008b67;
+    cursor: pointer;
+  }
+}
+.down-btn {
+  top: 1px;
+  right: 69px;
+  position: absolute;
+  .d-ib();
+  .wh(23px);
+  line-height: 23px;
+  .tc();
+  background: #008b67;
+}
+.down-icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: -2px 7px;
+  background: url("../images/icon.png") -10px -71px;
+}
+
+.down-list-box {
+  position: absolute;
+  left: 36px;
+  top: 24px;
+  z-index: 99;
+  width: 148px;
+  border: 1px solid #ccc;
+  background: #fff;
+  display: none;
+  a {
+    text-indent: 11px;
+    width: 148px;
+    display: block;
+  }
+}
+.codeAbout-result {
+  padding-bottom: 10px;
+  span {
+    color: #eb9a00;
+  }
+}
+.codeAbout-tab {
+  .rel();
+  border: 1px solid #ddd;
+}
+.codeAbout-tab-con {
+  .clearfix();
+  width: 100%;
+  tr {
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    td {
+      color: #333;
+      width: 85px;
+      .omit();
+    }
+  }
+  th {
+    width: 74px;
+    text-align: center;
+    color: #333;
+    font-size: 12px;
+    background: #e3e3e3;
+    height: 36px;
+    line-height: 36px;
+  }
+  .cut {
+    background: #f5f5f5;
+  }
+}
+.disease {
+  width: 112px;
+  span {
+    width: 170px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.spell {
+  display: inline-block;
+  width: 100px;
+  .omit();
+}
+.page {
+  position: absolute;
+  right: 13px;
+  margin: 24px auto;
+  /* margin-top: 24px;
+  margin-bottom: 24px; */
+  span {
+    color: #888888;
+  }
+
+}
+
+.page-list {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+}
+/* 选择页数字点击前 */
+.page-list-be {
+  background-color: @usual_color;
+  color: @link_color;
+  .page-list;
+}
+/* 选择页数字点击后 */
+.page-list-af {
+  background-color: #dddddd;
+  color: #7f8c8c;
+  .page-list;
+}
+.left-icon {
+  .page-list-be;
+}
+/* 上一页 */
+.last-page {
+  .left-icon;
+  i {
+    .d-ib();
+    width: 6px;
+    height: 8px;
+    background: url("../images/icon.png") -78px -38px;; 
+  }
+}
+/* 下一页 */
+.next-page {
+  .left-icon;
+  i {
+    .d-ib();
+    width: 6px;
+    height: 8px;
+    background: url("../images/icon.png") no-repeat; 
+    background-position: -36px -98px;
+  }
+}

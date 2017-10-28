@@ -1,0 +1,128 @@
+@charset"utf-8";
+/* less库 */
+@import "../less/public";
+
+//知识百科内容
+.know {
+  width: 713px;
+}
+.know-nav {
+  width: 711px;
+  height: 40px;
+  /* .allb(solid); */
+  border: 1px solid #cdcdcd;
+}
+.know-tit {
+  width: 711px;
+  line-height: 40px;
+  .clearfix();
+  li {
+    .fl();
+    width: 237px;
+    text-align: center;
+    cursor: pointer;
+    a {
+      .d-b();
+      color: #333333;
+      &:hover {
+        color: #ffffff;
+        background-color: #aaaaaa;
+      }
+    }
+  }
+  .thistab {
+    background-color: #777474;
+    a {
+      color: @link_color;
+      &:hover {
+        background-color: #777474;
+      }
+    }
+  }
+}
+.tab-conbox {
+  width: 713px;
+  margin-top: 30px;
+}
+.know-con {
+ display: none;
+}
+.know-box {
+  .clearfix();
+}
+.know-menu {
+  width: 711px;
+  border: 1px solid #cdcdcd;
+  background-color: #fcfcfc;
+  span {
+    .fl();
+    padding-top: 15px;
+    padding-left: 12px;
+    width: 60px;
+  }
+  a {
+    color: #333333;
+  }
+  ul {
+    padding: 7px 0;
+    width: 639px;
+    .clearfix();
+  }
+  li {
+    .fl();
+    margin-left: 25px;
+    width: 75px;
+    .l-h(24px);
+    .omit()
+  }
+}
+.know-list {
+  .d-ib();
+  margin-bottom: -3px;
+  .clearfix();
+
+}
+.scroll {
+  position: fixed;
+  left: 60.8%;
+  z-index: 99;
+  li {
+    line-height: 24px;
+    .font-s16();
+    font-weight: 400;
+    color: #008b67;
+  }
+}
+.know-box .scroll-con {
+  .fl();
+  margin-top: 25px;
+  padding-left: 15px;
+  width: 695px;
+  span {
+    .d-ib();
+    .font-s14();
+    color: #666666;
+    .font-w400();
+  }
+  .detail {
+    margin-top: 10px;
+    ul {
+      .clearfix();
+    }
+    li {
+      float: left;
+      margin-right: 48px;
+      width: 84px;
+      line-height: 30px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: left;
+      overflow: hidden;
+      a {
+        color: #666666;
+        font-size: 14px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,338 @@
+@charset"utf-8";
+/* less库 */
+@import "../less/public";
+
+/* 主页 */
+
+//banner
+.banner {
+  height: 301px;
+  min-width: 1300px;
+  img {
+    .wh();
+  }
+}
+//内容
+.main {
+  .bhc(1282px,437px,40px);
+  &-con {
+    .clearfix();
+  }
+}
+//内容主体左侧
+.left-sidebar {
+  .d-ib();
+  .fl(); 
+  margin-right: 28px;
+  width: 352px;
+  &-tit {
+    text-align: center;
+    .l-h(55px);
+    background-color: #54af97;
+    label {
+      letter-spacing: 8px;
+      .fs-fm(30px,@link_color);
+    }
+  }
+  &-con {
+    .font-s14();
+    background-color: #f0f0f0;
+  }
+  .sidebar-list,.sidebar-list-last {
+    .compose(#f0f0f0,50px,60px,12px,@font_color);  //ul、li排版
+    li {
+      margin-left: 22px;
+      cursor: auto;
+      &:hover {
+         color: #fff;
+        a {
+          background-color: #c0d83f;
+          color: #fff;
+        }
+      }
+      a {
+        padding: 3px 5px;
+      }
+    }
+  }
+  .sidebar-list {
+    height: 102px;
+    ul {
+      .bb(dotted); 
+    }
+  }
+  .sidebar-list-last {
+    height: 70px;
+  }
+}
+//内容主体中间
+.mid {
+  .fd();
+  width: 533px;
+  margin-right: 28px;
+  background-color: @link_color;
+  .list {
+    height: 107px;
+    .bt(dotted);
+  }
+  .left {
+    .fd();
+    width: 249px;
+    height: 107px;
+  }
+  .right {
+    .d-ib();
+    width: 283px;
+    height: 107px;
+    .bl(dotted);  //less--匹配模式
+  }
+  .left-con,.right-con {
+    margin: 1px;
+    width: 168px;
+    .l-h(61px);
+    cursor: pointer;
+    &:hover {
+      background-color: @icon_hover;
+    }
+    span {
+      margin-left: 26px;
+      .fs-fs(14px,@font_color);
+    }
+  }
+  .left-con {
+    padding: 27px 38px 17px 41px;
+  }
+  .right-con {
+    padding: 27px 48px 17px 65px;
+  }
+  .index-icon {
+    .fl();
+    .wh(60px);
+    background: url("../images/index_nav.png") no-repeat;
+  }
+  /* 疾病 */
+  .index-icon-nav01 {
+    .index-icon;
+    background-position: -250px -250px;
+  }
+  .clinic {
+    .left-con;
+    &:hover {
+      .index-icon-nav01 {
+        background-position: -10px -250px;
+      }
+    }
+  }
+  /* 用药 */
+  .index-icon-nav02 {
+    .index-icon;
+    background-position: -170px -250px;
+  }
+  .medicine {
+    .right-con;
+    &:hover {
+      .index-icon-nav02 {
+        background-position: -90px -250px;
+      }
+    }
+  }
+  /* 检查 */
+  .index-icon-nav03 {
+    .index-icon;
+    background-position: -170px -10px;
+  }
+  .sea {
+    .left-con;
+    &:hover {
+      .index-icon-nav03 {
+        background-position: -170px -90px;
+      }
+    }
+  }
+  /* 文献 */
+  .index-icon-nav04 {
+    .index-icon;
+    background-position: -10px -170px;
+  }
+  .book {
+    .right-con;
+    &:hover {
+      .index-icon-nav04 {
+        background-position: -90px -170px;
+      }
+    }
+  }
+  /* 指南 */
+  .index-icon-nav05 {
+    .index-icon;
+    background-position: -10px -10px;
+  }
+  .know {
+    .left-con;
+    &:hover {
+      .index-icon-nav05 {
+        background-position: -250px -10px;
+      }
+    }
+  }
+  /* 视频 */
+  .index-icon-nav06 {
+    .index-icon;
+    background-position: -250px -90px;
+  }
+  .video {
+    .right-con;
+    &:hover {
+      .index-icon-nav06 {
+        background-position: -250px -170px;
+      }
+    }
+  }
+  /* 循证文献 */
+  .index-icon-nav07 {
+    .index-icon;
+    background-position: -170px -170px;
+  }
+  .doc {
+    .left-con;
+    &:hover {
+      .index-icon-nav07 {
+        background-position: -90px -90px;
+      }
+    }
+  }
+  /* 中医药 */
+  .index-icon-nav08 {
+    .index-icon;
+    background-position: -10px -90px;
+  }
+  .china {
+    .right-con;
+    &:hover {
+      .index-icon-nav08 {
+        background-position: -90px -10px;
+      }
+    }
+  }
+}
+//内容主体右侧
+.tags {
+  .fd();
+  width: 341px;
+  &-first,&-second {
+    background-color: @right_color;
+    .allb(solid,1px,#eef7f8);
+  }
+  //申请试用
+  &-first {
+    .rel();
+  }
+  //临床助手
+  &-second {
+    margin-top: 21px;
+    padding: 8px 0;
+  }
+  //三角背景 
+  .triangle {
+    .triangle-lt(98px,#dff1ed);
+  }
+  .triangle-right {
+    top: 74px;
+    .triangle-r(61px,#f7fcfc);
+  }
+  .tags-first-con {
+    height: 186px;
+    padding-top: 20px;
+  }
+  //申请试用
+  .apply {
+    .rel();
+    .plr(16px,210px);
+    a {
+      .fs-fm(28px,@usual_color);
+    }
+  }
+  //业务介绍
+  .introduce {
+    .plr(137px,7px);
+    hr {
+      .d-ib();
+      width: 50px;
+      vertical-align: middle;
+    }
+    a {
+      .fs-fm(22px,@usual_color);
+      .font-w700();
+    }
+  }
+  .introduce-con {
+    margin-top: 9px;
+    padding-left: 108px;
+    ul {
+      .clearfix();
+      li {
+        cursor: auto;
+        margin-top: 15px;
+        a {
+          .d-ib();
+          width: 70px;
+          .l-h(25px);
+        }
+      }
+      .introduce-tit {
+        .rel();
+        top: 2px;
+        .fs-fm(14px);
+        .tc();
+        background-color: #edeae8;
+      }
+      .introduce-a {
+        color: @point_color;
+      }
+    }
+  }
+}
+//临床助手
+.code {
+  &-title {
+    .tc();
+    a {
+      .fs-fm(22px,@usual_color);
+      .font-w700();
+    }
+  }
+  ul {
+    .clearfix();
+    .tc();
+  }
+  li {
+    .d-ib();
+    padding-top: 20px;
+    .fl();
+    cursor: auto;
+    p {
+      .fs-fm(18px);
+      margin-top: 8px;
+    }
+  }
+  .android,.helper {
+    .allb(solid,4px,#dddddd);
+    .wh(102px);
+  }
+  //二维码
+  &-android {
+    margin-left: 41px;
+  }
+  .android {
+    background: url("../images/common.png") -10px -212px;
+  }
+  &-helper {
+    margin-left: 45px;
+  }
+  .helper {
+    background: url("../images/common.png") -132px -212px;
+  }
+}
+
+
+

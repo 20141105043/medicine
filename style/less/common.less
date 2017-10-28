@@ -1,0 +1,658 @@
+@charset"utf-8";
+
+/* less库 */
+@import "../less/public";
+
+/*初始化*/
+.reset();
+
+/* Header */
+.header {
+  position: fixed;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  @h:40px;
+  min-width: 500px;
+  background-color: @usual_color;
+  &-con {
+    height: @h;
+    padding: 0 34px;
+    .clearfix();
+  }
+
+  .main-nav,.login {
+    .clearfix();
+    &>li {
+      .fl();
+      height: 37px; 
+      padding: 3px 10px 0;
+      &>a {
+       .d-b();
+       .l-h(37px);
+       color: @link_color;
+      }
+    }
+  }
+  .main-nav {
+    .fl();
+    &>li {
+      &:hover {
+        &>a {
+          .tu();
+        }
+      }
+    }
+  }
+  //登录注册
+  .login {
+    .fr();
+    &>li {
+      &:hover {
+        padding: 0 10px;
+        .bt(solid,3px,#c0d83f);
+        background-color: @link_color;
+        a {
+          color: @font_color;
+        }  
+      } 
+    }
+  }
+  .horn,.horn-af {
+    .d-ib();
+    .wh(9px);
+    margin: 1px -1px;
+    vertical-align: text-bottom;
+  }
+  .horn {
+    background: url("../images/icon.png") -62px -98px;
+  }
+  .horn-af {
+    background: url("../images/icon.png") -70px -71px;
+  }
+  .course {
+    .rel();
+  }
+  .course-box {
+    display: none;  
+    left: 0;
+    .abs();
+    background-color: @usual_color;
+  }
+  .course-box.courseShow {
+    .d-b();
+  }
+  .box-list {
+    margin: 4px 0;
+    width: 100px;
+    .clearfix();
+    li {
+      .fl();
+      margin: 4px 0;
+      padding-left: 14px;
+      width: 86px;
+      .l-h(26px);
+      a {
+        color: @link_color;
+      }
+    }
+     li:hover {
+      background-color: #007758;
+    } 
+  }
+}
+.header-brace {
+  height: 40px;
+}
+/* End Header */
+
+/* logo */
+.menu {
+  min-width: 1300px;
+  background-color: @link_color;
+}
+.menu-con {
+  height: 77px;
+  padding: 0 55px 0 50px;
+  .clearfix();
+  .logo {
+    .fd();
+    margin-top: 4px;
+    width: 305px;
+    height: 67px;
+    .ti();
+    background: url("../images/common.png") -10px -10px;
+  }
+}
+//搜索框
+.search {
+  .rel();
+  @w:35px;
+  width: 549px;
+  height: @w;
+  margin-top: 20px;
+  cursor: pointer;
+  .fr();
+  //选择全部
+  .select {
+    width: 98px;
+    .l-h((@w)-2px);
+    .tc();
+    .allb(solid);
+    border-right: none;
+    .fl();
+    a {
+      color: #000;
+    }
+    span {
+      .d-ib();
+      .wh(12px);
+      margin: -4px 6px;
+      background: url("../images/icon.png") -10px -42px;
+    }
+  }
+  &-text {
+    .fl();
+    width: 399px;
+    height: (@w)-2px;
+    .allb(solid);
+    border-left: none;
+    
+  }
+  &-button {
+    .fl();
+    width: 50px;
+    height: @w;
+    cursor: pointer;
+    background: url("../images/common.png") -335px -276px;
+  }
+  //选择全部下拉框
+  .select-box {
+    display: none;
+    .abs();
+    left: 0;
+    z-index: 1;
+    .allb(solid);
+    background-color: @link_color;
+    ul {
+      li {
+        width: 68px;
+        margin: 7px 0;
+        padding-left: 20px;
+        .tl();
+        &:hover {
+          background-color: #f5f5f5;
+        }
+        a {
+          color: #333333;
+        }
+      }
+    }
+  }
+}
+
+/* Footer */
+.footer {
+  min-width: 1300px;
+  height: 96px;
+  .tc();
+  background-color: @usual_color;
+  &-con {
+    padding-top: 30px;
+    div {
+      margin-bottom: 5px;
+    }
+  }
+  a {
+    color: @link_color;
+  }
+}
+/* End Footer */
+
+/* science、knowledge公用部分 */
+
+//内容区
+.science-main {
+  .clearfix();
+  .bc(1000px,29px);
+}
+.science-content-left {
+  .fl();
+  width: 710px;
+}
+.science-content-right {
+  .fl();
+  width: 260px;
+  margin-left: 26px;
+}
+//导航栏
+.nav {
+  min-width: 1300px;
+  height: 50px;
+  .bt(solid,2px,@usual_color);
+  .bb(solid);
+  background-color: #f1f9f7;
+}
+.nav-con {
+  .clearfix();
+  .rel();
+  .bc(1000px);
+  .data-list {
+    .clearfix();
+    .fl();
+  }
+  //下拉菜单
+  .inside-list {
+    display: none; 
+    top: 50px;
+    left: 0;
+    .abs();
+    z-index: 1;
+    background-color: @usual_color;
+    ul {
+      width: 300px;
+      .clearfix();
+    }
+    li {
+      .fl();
+      padding: 0 15px;
+      width: 70px;
+      line-height: 30px;
+      &:hover {
+        a {
+          .tu();
+        }
+      }
+    }
+    a {
+      .fs-fs(14px,@link_color);
+    }
+  }
+  .inside-list.show {
+    .d-b();
+  }
+  .data-title {
+    .fd();
+    padding: 0 16px;
+    line-height: 50px; 
+    .font-s14();
+    a {
+      .fs-fs(14px);
+      i {
+        .d-ib();
+        .wh(10px);
+        margin: -2px 7px;
+        background: url("../images/icon.png") -40px -71px;
+      }
+    }
+    &:hover {
+      background-color: @usual_color;
+      a {
+        color: @link_color;
+      }
+      i {
+        background-position: -10px -71px;
+      }
+    }
+  }
+  //收藏本学科
+  .love {
+    .fr();
+    line-height: 48px;
+    i {
+      .d-ib();
+      .wh(14px);
+      margin: -4px 5px;
+      background: url("../images/icon.png") -44px -10px;
+    }
+    a {
+      color: #333333;
+      .tu();
+    }
+  }
+}
+//右侧内容简介
+.article-introduce {
+  .article-introduce-con {
+    padding: 25px 10px;
+    .bb(solid);
+    p {
+      line-height: 26px;
+    }
+  }
+}
+.article-introduce-title {
+  padding-left: 14px;
+  .ubb(solid);
+  height: 46px;
+  background-color: #f5f5f5;
+  .introduce-title-con {
+    margin-top: 14px;
+    line-height: 22px;
+    a {
+      .font-w700();
+    }
+  }
+}
+.introduce-picture {
+  .d-ib();
+  .wh(20px);
+  .ti();
+  background: url("../images/science_icon.png"); 
+}
+.article-picture {
+  .introduce-picture;
+  background-position: -10px -101px;
+}
+.people-picture {
+  .introduce-picture;
+  background-position: -48px -101px;
+}
+.video-picture {
+  .introduce-picture;
+  background-position: -145px -55px;
+}
+//专家介绍
+.people-introduce-con {
+  padding: 18px 10px;
+}
+.people-main {
+  hr {
+    .d-ib();
+    width: 102px;
+    vertical-align: middle;
+  }
+}
+.people-info {
+  .clearfix();
+  padding: 15px 0;
+}
+.photo-box {
+  .fd();
+  .allb(solid);
+  .people-info-photo {
+    .d-ib();
+    margin: 2px;
+    margin-bottom: -2px;
+    .wh(70px);
+    background: url("../images/common.png") -335px -121px;
+  }
+}
+
+.people-info-details {
+  .fd();
+  margin-left: 15px;
+  a {
+    .d-b();
+  }
+  .name {
+    line-height: 38px;
+    color: #676767;
+    .font-w700();
+  }
+  .style {
+    line-height: 18px;
+    color: #ababab;;
+  }
+}
+.member {
+  padding: 20px 0;
+  .member-list {
+    line-height: 24px;
+    .clearfix();
+    li {
+      width: 25%;
+      .fl();
+    }
+  }
+}
+.more {
+  .clearfix();
+  a {
+    padding-right: 20px;
+    .fr();
+    color: @usual_color;
+  }
+  i {
+    .d-ib();
+    .wh(9px);
+    margin: -1px 0;
+    background: url("../images/icon.png") -78px -10px;
+  }
+}
+//相关视频
+.video-con {
+  padding: 0 10px;
+  .video-con-fir {
+    padding: 22px 0;
+    .bb(dotted);
+  }
+  .video-list {
+    .d-ib();
+    width: 50%;
+  }
+}
+.video-cardio {
+  .bc(95px);
+  span {
+    .d-ib();
+    .allb(solid);
+    .wh(93px);
+    background: url("../images/common.png") -335px -10px;
+  }
+  p {
+    .tc();
+    color: #899595;
+  }
+}
+//热点推荐
+.hot {
+  padding: 0 20px;
+  .hot-point {
+    .font-s16();
+    .font-w700();
+  }
+}
+.hot-list {
+  .clearfix();
+  margin-top: 15px;
+  line-height: 30px;
+  li {
+    .fl();
+    padding-right: 7px;
+    a {
+      padding: 5px;
+      color: @link_color;
+      background-color: #7f8c8c;
+      -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+            border-radius: 5px;
+      &:hover {
+        background-color: #c0d83f;
+      }
+    }
+  }
+}
+/* End science、knowledge公用部分 */
+
+/* resource、literature公用部分 */
+//居中内容区
+.guideNav {
+  padding-bottom: 33px;
+  background-color: @resource_main_bg;
+  a {
+    .font-fm();
+  }
+  &-con {
+    .clearfix();
+    height: 748px;
+    .bc(801px);
+    .allb(solid);
+    background-color: @link_color;
+  }
+}
+//头部
+.resource-header {
+  padding-top: 1px;
+  background-color: @resource_main_bg;
+  
+  //logo
+  .resource-logo {
+    .bc(305px,35px);
+    height: 67px;
+    background: url("../images/common.png") -10px -10px;
+  }
+}
+//搜索框
+.search-box {
+  height: 123px;
+  .bc(801px);
+  .search-tag {
+    .fl();
+    width: 60px;
+    height: 45px;
+    cursor: pointer;
+    background: url("../images/common.png") -335px -211px;
+  }
+  .search-box-txt(@w:652px) {
+    .fl();
+    width: @w;
+    height: 43px;
+    .allb(solid);
+    background-color: @link_color;
+  }
+  .search-disease {
+    .search-box-txt();
+    padding-left: 13px;
+    border-right: none;
+    color: @point_color;
+    -moz-box-shadow: 0 0 5px 0 #ccc inset;
+    -webkit-box-shadow: 0 0 5px 0 #ccc inset;
+    box-shadow: 0 0 5px 0 #ccc inset;
+  } 
+  .search-btn {
+    .search-box-txt(73px);
+    .l-h(43px);
+    .tc();
+    -moz-box-shadow: 0 0 5px 0 #ccc inset;
+    -webkit-box-shadow: 0 0 5px 0 #ccc inset;
+    box-shadow: 0 0 5px 0 #ccc inset;
+  } 
+  .box-tit-tab {
+    height: 30px;
+    .clearfix();
+    li {
+      .fl();
+      padding: 0 19px;
+      .fs-fs(14px);
+      a {
+        .d-b();
+        line-height: 30px;
+        color: #424040;
+      }
+      &:hover {
+        background-color: @usual_color;
+        a {
+          color: @link_color;
+        }
+      } 
+    }
+  }
+  .thisBoxTit {
+    background-color: @usual_color;
+  }
+  #thisBoxCon {
+    color: @link_color;
+  }
+  //热门搜索
+  .hot-search {
+    .fl();
+    .font-fs();
+    span,a {
+      .d-ib();
+      color: @point_color;
+      padding: 5px 0px;
+    }
+    &-con {
+      margin-right: 15px;
+    }
+  }
+}
+/* End resource、literature公用部分 */
+
+/* 返回顶部 */
+.fixed-goTop {
+  position: fixed;
+  right: 1%;
+  bottom: 5%;
+  .wh(40px);
+  border: 1px solid #eee;
+  background-color: white;
+  z-index: 1040;
+  -webkit-backface-visibility: hidden;
+  a {
+    .d-b();
+    .wh(40px);
+    line-height: 28px;
+    font-size: 24px;
+    .tc();
+    color: #64854c;
+  }
+  i {
+    vertical-align: middle;
+  }
+  .fixed-goTop a:after {
+    .d-b();
+    content: ".";
+    font-size: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+/* 滚动条 */
+.nicescroll-rails {
+  width: 1px !important;
+}
+.nicescroll-cursors {
+  right: -2px !important;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  .wh(100%);
+  display: none;
+}
+.layer-bg {
+  .wh(100%);
+  background: #000;
+  opacity: .3;
+  -webkit-opacity: .3;
+  -moz-opacity: .3;
+  -khtml-opacity: .3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+}
+.window {
+  .abc(576px,fixed);
+  height: 494px;
+  .allb(solid,2px,#599e8c);
+  z-index: 1;
+  background-color: #fff;
+}
+.close-btn {
+  .abs();
+  right: -14px;
+  top: -14px;
+  .wh(23px);
+  .allb(solid,1px,#008b67);
+  .d-ib();
+  .tc();
+  line-height: 23px;
+  color: #008b67;
+  font-size: 20px;
+  background: #fff;
+  cursor: pointer;
+}

@@ -1,0 +1,175 @@
+@charset "utf-8";
+/* less库 */
+/* 边框--less匹配模式 */
+/* 单边框--less匹配模式 */
+/* 省略号 */
+/* 三角形背景 */
+.know {
+  width: 713px;
+}
+.know-nav {
+  width: 711px;
+  height: 40px;
+  /* .allb(solid); */
+  border: 1px solid #cdcdcd;
+}
+.know-tit {
+  width: 711px;
+  line-height: 40px;
+  *zoom: 1;
+}
+.know-tit:before,
+.know-tit:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.know-tit:after {
+  clear: both;
+}
+.know-tit li {
+  float: left;
+  width: 237px;
+  text-align: center;
+  cursor: pointer;
+}
+.know-tit li a {
+  display: block;
+  color: #333333;
+}
+.know-tit li a:hover {
+  color: #ffffff;
+  background-color: #aaaaaa;
+}
+.know-tit .thistab {
+  background-color: #777474;
+}
+.know-tit .thistab a {
+  color: #ffffff;
+}
+.know-tit .thistab a:hover {
+  background-color: #777474;
+}
+.tab-conbox {
+  width: 713px;
+  margin-top: 30px;
+}
+.know-con {
+  display: none;
+}
+.know-box {
+  *zoom: 1;
+}
+.know-box:before,
+.know-box:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.know-box:after {
+  clear: both;
+}
+.know-menu {
+  width: 711px;
+  border: 1px solid #cdcdcd;
+  background-color: #fcfcfc;
+}
+.know-menu span {
+  float: left;
+  padding-top: 15px;
+  padding-left: 12px;
+  width: 60px;
+}
+.know-menu a {
+  color: #333333;
+}
+.know-menu ul {
+  padding: 7px 0;
+  width: 639px;
+  *zoom: 1;
+}
+.know-menu ul:before,
+.know-menu ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.know-menu ul:after {
+  clear: both;
+}
+.know-menu li {
+  float: left;
+  margin-left: 25px;
+  width: 75px;
+  height: 24px;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.know-list {
+  display: inline-block;
+  margin-bottom: -3px;
+  *zoom: 1;
+}
+.know-list:before,
+.know-list:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.know-list:after {
+  clear: both;
+}
+.scroll {
+  position: fixed;
+  left: 60.8%;
+  z-index: 99;
+}
+.scroll li {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #008b67;
+}
+.know-box .scroll-con {
+  float: left;
+  margin-top: 25px;
+  padding-left: 15px;
+  width: 695px;
+}
+.know-box .scroll-con span {
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  font-weight: 400;
+}
+.know-box .scroll-con .detail {
+  margin-top: 10px;
+}
+.know-box .scroll-con .detail ul {
+  *zoom: 1;
+}
+.know-box .scroll-con .detail ul:before,
+.know-box .scroll-con .detail ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.know-box .scroll-con .detail ul:after {
+  clear: both;
+}
+.know-box .scroll-con .detail li {
+  float: left;
+  margin-right: 48px;
+  width: 84px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  overflow: hidden;
+}
+.know-box .scroll-con .detail li a {
+  color: #666666;
+  font-size: 14px;
+}
