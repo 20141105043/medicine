@@ -33,11 +33,15 @@ $(document).ready(function(){
 	var isNotLove = true;
 	$('#love').click(function(){
 		if(isNotLove){
-			$(this).find('i').css("background-position","-10px -10px");
+			$(this).siblings('i').css("background-position","-10px -10px");
+			$.dialog.alert({content:"收藏成功!"});
+			$(this).text("取消收藏");
 			isNotLove = false;
 			return false;
 		}else{
-			$(this).find('i').css("background-position","-44px -10px");
+			$(this).siblings('i').css("background-position","-44px -10px");
+			$.dialog.alert({content:"取消收藏!"});
+			$(this).text("收藏本学科");
 			isNotLove = true;
 			return true;
 		}
@@ -85,7 +89,7 @@ $(document).ready(function(){
 	}
 	
 	/* 遮罩层弹出 */
-	$('.more a').click(function() {
+	$('.moreTeam a').click(function() {
 		$('body').css('position','relative');
 		$('.layer').stop(true, true).fadeIn();
 		$('.layer .window').stop(true, true).fadeIn();
@@ -106,4 +110,35 @@ $(document).ready(function(){
         $('.layer .layer-con').stop(true, true).fadeOut();
         $('.layer .window').stop(true, true).fadeOut();
     });
+
+});
+/* 判断ie placeholder */
+$(function () {
+    //浏览器不支持 placeholder 时才执行
+    if (!('placeholder' in document.createElement('input'))) {
+        $('[placeholder]').each(function () {
+            var $tag = $(this); //当前 input
+            var $copy = $tag.clone();   //当前 input 的复制
+            if ($copy.val() == "") {
+                $copy.css("color", "#999");
+                $copy.val($copy.attr('placeholder'));
+            }
+            $copy.focus(function () {
+                if (this.value == $copy.attr('placeholder')) {
+                    this.value = '';
+                    this.style.color = '#000';
+                }
+            });
+            $copy.blur(function () {
+                if (this.value=="") {
+                    this.value = $copy.attr('placeholder');
+                    $tag.val("");
+                    this.style.color = '#999';
+                } else {
+                    $tag.val(this.value);
+                }
+            });
+            $tag.hide().after($copy.show());    //当前 input 隐藏 ，具有 placeholder 功能js的input显示
+        });
+    }
 });

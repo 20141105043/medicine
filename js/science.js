@@ -1,9 +1,14 @@
 $(document).ready(function(){
 
 	/* 发表选择下拉框 */
-	$(".publish").click(function(){
+	$('.publish').on("click",function(e){
 		$(".publish-list").slideToggle(200);
+		$(document).on("click",function(){
+			$(".publish-list").hide();
+		});
+		e.stopPropagation();
 	});
+
 	$(".publish-list ul li").click(function(){
 		var pTxt = $(this).children('a').text();
 		$(".publish").children('a').text(pTxt);

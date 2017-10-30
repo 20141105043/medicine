@@ -14,7 +14,7 @@
 }
 //内容
 .main {
-  .bhc(1282px,437px,40px);
+  .bhc(1300px,437px,40px);
   &-con {
     .clearfix();
   }
@@ -39,9 +39,14 @@
     background-color: #f0f0f0;
   }
   .sidebar-list,.sidebar-list-last {
-    .compose(#f0f0f0,50px,60px,12px,@font_color);  //ul、li排版
+    .compose(#f0f0f0,50px,82px,12px,@font_color);  //ul、li排版
+    ul {
+      margin-left: 14px;
+      margin-right: 7px;
+      .bb(dotted); 
+    }
     li {
-      margin-left: 22px;
+      /* margin-left: 22px; */
       cursor: auto;
       &:hover {
          color: #fff;
@@ -51,18 +56,19 @@
         }
       }
       a {
+        .font-s14();
         padding: 3px 5px;
       }
     }
   }
   .sidebar-list {
     height: 102px;
-    ul {
-      .bb(dotted); 
-    }
   }
   .sidebar-list-last {
     height: 70px;
+    ul {
+      border: none;
+    }
   }
 }
 //内容主体中间
@@ -250,6 +256,7 @@
     .plr(16px,210px);
     a {
       .fs-fm(28px,@usual_color);
+      .font-w700();
     }
   }
   //业务介绍
@@ -277,6 +284,7 @@
           .d-ib();
           width: 70px;
           .l-h(25px);
+          .tc();
         }
       }
       .introduce-tit {
@@ -284,6 +292,7 @@
         top: 2px;
         .fs-fm(14px);
         .tc();
+        .font-w700();
         background-color: #edeae8;
       }
       .introduce-a {

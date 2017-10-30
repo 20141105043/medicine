@@ -2,6 +2,7 @@
 /* less库 */
 /* 边框--less匹配模式 */
 /* 单边框--less匹配模式 */
+/* 行高 */
 /* 省略号 */
 /* 三角形背景 */
 .know {
@@ -10,7 +11,6 @@
 .know-nav {
   width: 711px;
   height: 40px;
-  /* .allb(solid); */
   border: 1px solid #cdcdcd;
 }
 .know-tit {
@@ -35,19 +35,18 @@
 }
 .know-tit li a {
   display: block;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 235px;
+  height: 38px;
   color: #333333;
 }
 .know-tit li a:hover {
   color: #ffffff;
   background-color: #aaaaaa;
 }
-.know-tit .thistab {
-  background-color: #777474;
-}
 .know-tit .thistab a {
   color: #ffffff;
-}
-.know-tit .thistab a:hover {
   background-color: #777474;
 }
 .tab-conbox {
@@ -78,14 +77,16 @@
   float: left;
   padding-top: 15px;
   padding-left: 12px;
-  width: 60px;
+  width: 65px;
 }
 .know-menu a {
+  display: inline-block;
+  font-weight: 700;
   color: #333333;
 }
 .know-menu ul {
   padding: 7px 0;
-  width: 639px;
+  width: 629px;
   *zoom: 1;
 }
 .know-menu ul:before,
@@ -142,7 +143,7 @@
   display: inline-block;
   font-size: 14px;
   color: #666666;
-  font-weight: 400;
+  font-weight: 700;
 }
 .know-box .scroll-con .detail {
   margin-top: 10px;

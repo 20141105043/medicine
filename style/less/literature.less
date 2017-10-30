@@ -15,6 +15,7 @@
     padding-top: 17px;
     padding-left: 12px;
     .detail-txt {
+      color: @font_color;
       .d-b();
       .font-s18();
       .font-w700();
@@ -80,7 +81,7 @@
       margin-right: 7px;
       line-height: 30px;
       &:hover {
-        background-color: #98d0c2;
+        background-color: #e0f1ed;
       }
     }
     a {
@@ -150,8 +151,9 @@
 .room,.year,.team {
   margin-top: 32px;
 }
-.more {
+.moreTeam {
   .fr();
+  margin-right: 9px;
   line-height: 30px;
   a {
     .fs-fs(12px,@usual_color);
@@ -160,7 +162,7 @@
     .d-ib();
     .wh(8px);
     margin-left: 3px;
-    background: url("../images/icon.png") -78px -10px;
+    background: url("../images/icon.png") -107px -65px;
   }
 }
 /* 右侧 */
@@ -175,21 +177,24 @@
     position: absolute;
     bottom: 0;
     width: 225px;
-    line-height: 15px;
-    .tc();
+    line-height: 26px;
+    /* .tc(); */
     z-index: 10;
     .omit();
     background-color: #333333;
-    filter: alpha(opacity=60);
-    -khtml-opacity: 0.5;  
-      -moz-opacity: 0.5;  
-           opacity: 0.5; 
+    filter: alpha(opacity=80);
+    -khtml-opacity: 0.8;  
+      -moz-opacity: 0.8;  
+           opacity: 0.8; 
     a {
+      padding-left: 11px;
+      .d-ib();
       color: @link_color;
     }
   }
 }
 .update-list {
+  padding-left: 10px;
   &-tit {
     .d-ib();
     margin-top: 23px;
@@ -198,7 +203,6 @@
   }
   ul {
     margin-top: 17px;
-    padding-left: 11px;
     line-height: 30px;
   }
   li {
@@ -255,7 +259,7 @@
       .d-ib();
       margin-left: 6px;
       .wh(9px);
-      background: url("../images/common.png") -344px -97px;;
+      background: url("../images/common.png") -415px -211px;
     }
   }
   &-right {

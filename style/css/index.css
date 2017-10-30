@@ -14,7 +14,7 @@
   height: 100%;
 }
 .main {
-  width: 1282px;
+  width: 1300px;
   height: 437px;
   margin: 40px auto;
 }
@@ -74,7 +74,7 @@
 }
 .left-sidebar .sidebar-list li,
 .left-sidebar .sidebar-list-last li {
-  width: 60px;
+  width: 82px;
   height: 50px;
   line-height: 50px;
   float: left;
@@ -87,9 +87,15 @@
 .left-sidebar .sidebar-list-last a {
   font-size: 12px;
 }
+.left-sidebar .sidebar-list ul,
+.left-sidebar .sidebar-list-last ul {
+  margin-left: 14px;
+  margin-right: 7px;
+  border-bottom: 1px dotted #cccccc;
+}
 .left-sidebar .sidebar-list li,
 .left-sidebar .sidebar-list-last li {
-  margin-left: 22px;
+  /* margin-left: 22px; */
   cursor: auto;
 }
 .left-sidebar .sidebar-list li:hover,
@@ -103,16 +109,17 @@
 }
 .left-sidebar .sidebar-list li a,
 .left-sidebar .sidebar-list-last li a {
+  font-size: 14px;
   padding: 3px 5px;
 }
 .left-sidebar .sidebar-list {
   height: 102px;
 }
-.left-sidebar .sidebar-list ul {
-  border-bottom: 1px dotted #cccccc;
-}
 .left-sidebar .sidebar-list-last {
   height: 70px;
+}
+.left-sidebar .sidebar-list-last ul {
+  border: none;
 }
 .mid {
   display: inline-block;
@@ -441,6 +448,7 @@
   font-size: 28px;
   font-family: "Microsoft Yahei", "微软雅黑";
   color: #008b67;
+  font-weight: 700;
 }
 .tags .introduce {
   padding-left: 137px;
@@ -482,6 +490,7 @@
   width: 70px;
   height: 25px;
   line-height: 25px;
+  text-align: center;
 }
 .tags .introduce-con ul .introduce-tit {
   position: relative;
@@ -490,6 +499,7 @@
   font-family: "Microsoft Yahei", "微软雅黑";
   color: #666666;
   text-align: center;
+  font-weight: 700;
   background-color: #edeae8;
 }
 .tags .introduce-con ul .introduce-a {

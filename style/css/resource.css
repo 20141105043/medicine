@@ -2,6 +2,7 @@
 /* less库 */
 /* 边框--less匹配模式 */
 /* 单边框--less匹配模式 */
+/* 行高 */
 /* 省略号 */
 /* 三角形背景 */
 /* 疾病资源 */
@@ -207,15 +208,33 @@
   padding-top: 20px;
 }
 .codeAbout-name {
+  *zoom: 1;
   float: left;
   width: 234px;
   height: 25px;
   line-height: 25px;
   margin-right: 24px;
 }
+.codeAbout-name:before,
+.codeAbout-name:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.codeAbout-name:after {
+  clear: both;
+}
+.codeAbout-name span {
+  display: inline-block;
+  float: left;
+  position: relative;
+}
 .codeAbout-txt {
+  position: absolute;
+  top: 0;
   width: 148px;
   height: 23px;
+  line-height: 23px;
   text-indent: 11px;
   border: 1px solid #ccc;
 }
@@ -228,6 +247,7 @@
 }
 .big-category .find-btn {
   display: inline-block;
+  float: right;
   width: 60px;
   height: 25px;
   text-indent: 17px;

@@ -55,8 +55,12 @@ $(document).ready(function(){
     });
 
     /* 编码下拉菜单 */
-	$(".down-btn").click(function(){
+	$(".down-btn").click(function(e){
 		$(".down-list-box").slideToggle(200);
+		$(document).on("click",function(){
+			$(".down-list-box").hide();
+		});
+		e.stopPropagation(); //停止冒泡事件，点击别处可以收回
 	});
 	$(".down-list-box a").click(function(){
 		var sTxt = $(this).text();

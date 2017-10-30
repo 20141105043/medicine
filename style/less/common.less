@@ -20,7 +20,6 @@
     padding: 0 34px;
     .clearfix();
   }
-
   .main-nav,.login {
     .clearfix();
     &>li {
@@ -112,8 +111,9 @@
   background-color: @link_color;
 }
 .menu-con {
+  width: 1300px;
   height: 77px;
-  padding: 0 55px 0 50px;
+  margin: 0 auto;
   .clearfix();
   .logo {
     .fd();
@@ -155,9 +155,10 @@
     .fl();
     width: 399px;
     height: (@w)-2px;
+    line-height: 33px;
     .allb(solid);
     border-left: none;
-    
+    color: #aaaaaa;
   }
   &-button {
     .fl();
@@ -212,6 +213,9 @@
 /* science、knowledge公用部分 */
 
 //内容区
+.science-contain {
+  min-width: 1300px;
+}
 .science-main {
   .clearfix();
   .bc(1000px,29px);
@@ -302,7 +306,7 @@
     i {
       .d-ib();
       .wh(14px);
-      margin: -4px 5px;
+      margin: -4px -2px;
       background: url("../images/icon.png") -44px -10px;
     }
     a {
@@ -330,6 +334,8 @@
     margin-top: 14px;
     line-height: 22px;
     a {
+      margin-left: 4px;
+      .font-s16();
       .font-w700();
     }
   }
@@ -361,6 +367,9 @@
     .d-ib();
     width: 102px;
     vertical-align: middle;
+  }
+  span {
+    .font-s14();
   }
 }
 .people-info {
@@ -447,7 +456,7 @@
 }
 //热点推荐
 .hot {
-  padding: 0 20px;
+  padding-left: 20px; 
   .hot-point {
     .font-s16();
     .font-w700();
@@ -461,7 +470,7 @@
     .fl();
     padding-right: 7px;
     a {
-      padding: 5px;
+      padding: 5px 10px;
       color: @link_color;
       background-color: #7f8c8c;
       -webkit-border-radius: 5px;
@@ -478,6 +487,7 @@
 /* resource、literature公用部分 */
 //居中内容区
 .guideNav {
+  min-width: 1300px;
   padding-bottom: 33px;
   background-color: @resource_main_bg;
   a {
@@ -493,6 +503,7 @@
 }
 //头部
 .resource-header {
+  min-width: 1300px;
   padding-top: 1px;
   background-color: @resource_main_bg;
   
@@ -523,6 +534,7 @@
   }
   .search-disease {
     .search-box-txt();
+    line-height: 45px;
     padding-left: 13px;
     border-right: none;
     color: @point_color;
@@ -573,9 +585,9 @@
       color: @point_color;
       padding: 5px 0px;
     }
-    &-con {
-      margin-right: 15px;
-    }
+  }
+  .hot-con {
+    margin-left: 16px;
   }
 }
 /* End resource、literature公用部分 */
@@ -627,13 +639,13 @@
 .layer-bg {
   .wh(100%);
   background: #000;
-  opacity: .3;
-  -webkit-opacity: .3;
-  -moz-opacity: .3;
-  -khtml-opacity: .3;
-  filter: alpha(opacity=30);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: .2;
+  -webkit-opacity: .2;
+  -moz-opacity: .2;
+  -khtml-opacity: .2;
+  filter: alpha(opacity=20);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
 }
 .window {
   .abc(576px,fixed);
@@ -655,4 +667,40 @@
   font-size: 20px;
   background: #fff;
   cursor: pointer;
+}
+
+.mask{
+  background:#666666; 
+  opacity:0.4;
+}
+.dialog_body{
+  width:100%; 
+  height:100%; 
+  border:1px solid #999999; 
+  background-color:#ffffff;
+}
+.dialog_top{
+  background-color:#008b67; 
+  color:#ffffff; 
+  height:14px; 
+  padding:5px; 
+  font-size:12px;
+}
+.dialog_main{
+  text-align:center; 
+  height:55px; 
+  padding-top:40px; 
+  color:#333333;
+  font-size: 18px;
+}
+.dialog_bottom{
+  .clearfix();
+  padding:0 15px; 
+  color:#333333;
+  input {
+    cursor: pointer;
+  }
+}
+.dialog_bottom span{
+  float:right;
 }

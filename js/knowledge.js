@@ -26,8 +26,7 @@ $(document).ready(function(){
         var target = e.target;
         var id = $(target).data("to");
         var value = $('#'+id).offset().top;
-        var newPos = new Object();
-        newPos.top = 40;
+        $(this).css("color","#aaaaaa");
         $("html,body").animate({scrollTop:$('#'+id).offset().top-45},{duration:500,easing:"swing"});
     });
    

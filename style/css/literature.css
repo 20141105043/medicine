@@ -2,6 +2,7 @@
 /* less库 */
 /* 边框--less匹配模式 */
 /* 单边框--less匹配模式 */
+/* 行高 */
 /* 省略号 */
 /* 三角形背景 */
 /* 文献资源 */
@@ -26,6 +27,7 @@
   padding-left: 12px;
 }
 .guideNav-detail .guideNav-detail-tit .detail-txt {
+  color: #666666;
   display: block;
   font-size: 18px;
   font-weight: 700;
@@ -110,7 +112,7 @@
   line-height: 30px;
 }
 .year .year-con li:hover {
-  background-color: #98d0c2;
+  background-color: #e0f1ed;
 }
 .year .year-con a {
   color: #008b67;
@@ -207,21 +209,22 @@
 .team {
   margin-top: 32px;
 }
-.more {
+.moreTeam {
   float: right;
+  margin-right: 9px;
   line-height: 30px;
 }
-.more a {
+.moreTeam a {
   font-size: 12px;
   font-family: "SimSun", "宋体";
   color: #008b67;
 }
-.more i {
+.moreTeam i {
   display: inline-block;
   width: 8px;
   height: 8px;
   margin-left: 3px;
-  background: url("../images/icon.png") -78px -10px;
+  background: url("../images/icon.png") -107px -65px;
 }
 /* 右侧 */
 .book {
@@ -236,20 +239,25 @@
   position: absolute;
   bottom: 0;
   width: 225px;
-  line-height: 15px;
-  text-align: center;
+  line-height: 26px;
+  /* .tc(); */
   z-index: 10;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   background-color: #333333;
-  filter: alpha(opacity=60);
-  -khtml-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
+  filter: alpha(opacity=80);
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
 }
 .book .book-con a {
+  padding-left: 11px;
+  display: inline-block;
   color: #ffffff;
+}
+.update-list {
+  padding-left: 10px;
 }
 .update-list-tit {
   display: inline-block;
@@ -259,7 +267,6 @@
 }
 .update-list ul {
   margin-top: 17px;
-  padding-left: 11px;
   line-height: 30px;
 }
 .update-list li {
@@ -331,7 +338,7 @@
   margin-left: 6px;
   width: 9px;
   height: 9px;
-  background: url("../images/common.png") -344px -97px;
+  background: url("../images/common.png") -415px -211px;
 }
 .window-con-right {
   float: right;

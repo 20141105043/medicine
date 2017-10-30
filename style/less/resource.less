@@ -155,14 +155,21 @@
   }
 }
 .codeAbout-name {
+  .clearfix();
   .fl();
   width: 234px;
   .l-h(25px);
   margin-right: 24px;
+  span {
+    .fd();
+    position: relative;
+  }
 }
 .codeAbout-txt {
+  position: absolute;
+  top: 0;
   width: 148px;
-  height: 23px;
+  .l-h(23px);
   text-indent: 11px;
   border: 1px solid #ccc;
 }
@@ -173,6 +180,7 @@
   .l-h(25px);
   .find-btn {
     .d-ib();
+    .fr();
     width: 60px;
     height: 25px;
     text-indent: 17px;
