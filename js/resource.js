@@ -11,19 +11,27 @@ $(document).ready(function(){
 	$(".sortBox:first").show();
 	$(".list-cell:first").addClass("sortTab");
 	$(".list-cell:first span").addClass("thistab");
-	
+
 	$(".list-cell").click(function(e){
-		var target = e.target;
-		var id = $(target).data("to");
+		if(event.target==this){
+			var target = e.target;
+			var id = $(target).data("to");
 
-		$(".list-cell").removeClass("sortTab");
-		$(".list-cell span").removeClass("thistab");
-
-		$(target).addClass("sortTab");
-		$(target).find("span").addClass("thistab");
-
-		$(".sortBox").hide();
-		$("#" + id).slideToggle(400);
+			if($(this).hasClass("sortTab")) {
+				$(target).removeClass("sortTab");
+				$(target).find("span").removeClass("thistab");
+				$("#" + id).slideToggle(400);
+			}else {
+				$(".list-cell").removeClass("sortTab");
+				$(".list-cell span").removeClass("thistab");
+				$(".sortBox").hide();
+				$(target).addClass("sortTab");
+				$(target).find("span").addClass("thistab");
+				$("#" + id).slideToggle(400);
+			}
+		}else{
+			return false;
+		}
 
 	});
 
